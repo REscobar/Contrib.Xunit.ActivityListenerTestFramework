@@ -1,0 +1,11 @@
+﻿<Project>
+  <PropertyGroup>
+	  <UseActivityListenerTestFrameworkTestFramework Condition="'$(UseActivityListenerTestFrameworkTestFramework)' == ''">true</UseActivityListenerTestFrameworkTestFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="Xunit.TestFramework" Condition="$(UseActivityListenerTestFrameworkTestFramework) == 'true'">
+		<_Parameter1>Contrib.Xunit.ActivityListenerTestFramework.ActivityCoverageTestFramework</_Parameter1>
+		<_Parameter2>Contrib.Xunit.ActivityListenerTestFramework</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>

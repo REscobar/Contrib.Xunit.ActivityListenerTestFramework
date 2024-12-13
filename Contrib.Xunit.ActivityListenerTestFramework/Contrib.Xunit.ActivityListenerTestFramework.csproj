@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2;net461</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<LangVersion>12</LangVersion>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Diagnostics.DiagnosticSource" Version="6.0.0" />
+		<PackageReference Include="System.ValueTuple" Version="4.5.0" />
+		<PackageReference Include="xunit.extensibility.execution" Version="2.8.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<SourceRoot Include="$(MSBuildThisFileDirectory)/" />
+
+		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.2.25">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<Authors>REscobar</Authors>
+		<Company>REscobar</Company>
+		<PackageProjectUrl>https://github.com/REscobar/Contrib.Xunit.ActivityListenerTestFramework</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/REscobar/Contrib.Xunit.ActivityListenerTestFramework.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Description>Allows you to test the branching paths of tracing using System.Diagnostics.Activity</Description>
+		<PackageTags>xunitObservability;OpenTelemetry;MonitoringlTelemetry;Tracing</PackageTags>
+		<IncludeSymbols>True</IncludeSymbols>
+		<Version>2.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="$(MSBuildProjectDirectory)/../README.md" Pack="true" PackagePath="" />
+		<None Include="build/**/*.props" Pack="true" PackagePath="build" />
+		<None Include="buildMultiTargeting/**/*.props" Pack="true" PackagePath="buildMultiTargeting" />
+	</ItemGroup>
+
+</Project>
